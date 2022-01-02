@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.appiumframwork</groupId>
+    <artifactId>Mobile-Appium-Framework</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <developers>
+        <developer>
+            <name>Khaled M. Farh</name>
+            <email>khaled.farh@gmail.com</email>
+        </developer>
+    </developers>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <appium.java.client>7.6.0</appium.java.client>
+        <testNG>7.4.0</testNG>
+        <selenium.java.client>3.141.59</selenium.java.client>
+        <log4j.core>2.17.1</log4j.core>
+        <log4j.api>2.17.1</log4j.api>
+        <sl4j.simple>1.7.32</sl4j.simple>
+        <sl4j.api>1.7.32</sl4j.api>
+
+    </properties>
+
+<dependencies>
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>${appium.java.client}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>${testNG}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>${selenium.java.client}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>${log4j.core}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>${log4j.api}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${sl4j.api}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${sl4j.simple}</version>
+    </dependency>
+</dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources/com/appiumframwrok</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>antrun-plugin</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <echo message=" Welcome to my Mobile test automation frame work !"/>
+                                <echo message=" This Framework was designed by: Khaled M. Farh "/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
